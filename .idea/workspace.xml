@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="173e5fb4-bd58-498d-8252-b9fb5a8a6973" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/intent/IntentClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/intent/ReadXML.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/intent/XMLUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/intent/xml/Destination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/intent/xml/Source.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/dto/ComponentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/dto/ICCMethodAttributeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/dto/ICCVariableAttributeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/dto/RootXY.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/EnreParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/androidTest/java/org/arguslab/icc_dynregister1/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/java/org/arguslab/icc_dynregister1/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/java/org/arguslab/icc_dynregister1/MyReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/src/test/java/org/arguslab/icc_dynregister1/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/androidTest/java/org/arguslab/icc_dynregister2/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/java/org/arguslab/icc_dynregister2/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/java/org/arguslab/icc_dynregister2/MyReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/java/org/arguslab/icc_dynregister2/MyReceiver2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister2/src/test/java/org/arguslab/icc_dynregister2/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/androidTest/java/org/arguslab/icc_explicit1/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/java/org/arguslab/icc_explicit1/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/java/org/arguslab/icc_explicit1/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit1/src/test/java/org/arguslab/icc_explicit1/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/androidTest/java/org/arguslab/icc_explicit_nosrc_nosink/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/java/org/arguslab/icc_explicit_nosrc_nosink/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/java/org/arguslab/icc_explicit_nosrc_nosink/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_nosink/src/test/java/org/arguslab/icc_explicit_nosrc_nosink/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/androidTest/java/org/arguslab/icc_explicit_nosrc_sink/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/java/org/arguslab/icc_explicit_nosrc_sink/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/java/org/arguslab/icc_explicit_nosrc_sink/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_nosrc_sink/src/test/java/org/arguslab/icc_explicit_nosrc_sink/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/androidTest/java/org/arguslab/icc_explicit_src_nosink/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/java/org/arguslab/icc_explicit_src_nosink/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/java/org/arguslab/icc_explicit_src_nosink/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_nosink/src/test/java/org/arguslab/icc_explicit_src_nosink/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/androidTest/java/org/arguslab/icc_explicit_src_sink/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/java/org/arguslab/icc_explicit_src_sink/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/java/org/arguslab/icc_explicit_src_sink/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_explicit_src_sink/src/test/java/org/arguslab/icc_explicit_src_sink/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/androidTest/java/org/arguslab/icc_implicit_action/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/java/org/arguslab/icc_implicit_action/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/java/org/arguslab/icc_implicit_action/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_action/src/test/java/org/arguslab/icc_implicit_action/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/androidTest/java/org/arguslab/icc_implicit_category/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/java/org/arguslab/icc_implicit_category/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/java/org/arguslab/icc_implicit_category/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_category/src/test/java/org/arguslab/icc_implicit_category/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/androidTest/java/org/arguslab/icc_implicit_data1/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/java/org/arguslab/icc_implicit_data1/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/java/org/arguslab/icc_implicit_data1/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data1/src/test/java/org/arguslab/icc_implicit_data1/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/androidTest/java/org/arguslab/icc_implicit_data2/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/java/org/arguslab/icc_implicit_data2/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/java/org/arguslab/icc_implicit_data2/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/layout/activity_hook.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_data2/src/test/java/org/arguslab/icc_implicit_data2/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/androidTest/java/org/arguslab/icc_implicit_mix1/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/java/org/arguslab/icc_implicit_mix1/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/java/org/arguslab/icc_implicit_mix1/HookActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/java/org/arguslab/icc_implicit_mix1/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/layout/activity_hook.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix1/src/test/java/org/arguslab/icc_implicit_mix1/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/androidTest/java/org/arguslab/icc_implicit_mix2/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/java/org/arguslab/icc_implicit_mix2/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/java/org/arguslab/icc_implicit_mix2/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_mix2/src/test/java/org/arguslab/icc_implicit_mix2/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/androidTest/java/org/arguslab/icc_implicit_nosrc_nosink/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/java/org/arguslab/icc_implicit_nosrc_nosink/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/java/org/arguslab/icc_implicit_nosrc_nosink/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_nosink/src/test/java/org/arguslab/icc_implicit_nosrc_nosink/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/androidTest/java/org/arguslab/icc_implicit_nosrc_sink/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/java/org/arguslab/icc_implicit_nosrc_sink/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/java/org/arguslab/icc_implicit_nosrc_sink/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_nosrc_sink/src/test/java/org/arguslab/icc_implicit_nosrc_sink/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/androidTest/java/org/arguslab/icc_implicit_src_nosink/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/java/org/arguslab/icc_implicit_src_nosink/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/java/org/arguslab/icc_implicit_src_nosink/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_nosink/src/test/java/org/arguslab/icc_implicit_src_nosink/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/androidTest/java/org/arguslab/icc_implicit_src_sink/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/java/org/arguslab/icc_implicit_src_sink/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/java/org/arguslab/icc_implicit_src_sink/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_implicit_src_sink/src/test/java/org/arguslab/icc_implicit_src_sink/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/androidTest/java/org/arguslab/icc_intentservice/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/java/org/arguslab/icc_intentservice/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/java/org/arguslab/icc_intentservice/MyIntentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_intentservice/src/test/java/org/arguslab/icc_intentservice/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/androidTest/java/org/arguslab/icc_rpc_comprehensive/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/aidl/org/arguslab/icc_rpc_comprehensive/IRemoteService.aidl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/java/org/arguslab/icc_rpc_comprehensive/BarActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/java/org/arguslab/icc_rpc_comprehensive/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/java/org/arguslab/icc_rpc_comprehensive/RemoteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/layout/activity_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_rpc_comprehensive/src/test/java/org/arguslab/icc_rpc_comprehensive/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/androidTest/java/org/arguslab/icc_stateful/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/java/org/arguslab/icc_stateful/FooActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/java/org/arguslab/icc_stateful/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/layout/activity_foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_stateful/src/test/java/org/arguslab/icc_stateful/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/androidTest/java/org/arguslab/rpc_localservice/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/java/org/arguslab/rpc_localservice/LocalService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/java/org/arguslab/rpc_localservice/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_localservice/src/test/java/org/arguslab/rpc_localservice/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/androidTest/java/org/arguslab/rpc_messengerservice/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/java/org/arguslab/rpc_messengerservice/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/java/org/arguslab/rpc_messengerservice/MessengerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_messengerservice/src/test/java/org/arguslab/rpc_messengerservice/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/androidTest/java/org/arguslab/rpc_remoteservice/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/aidl/org/arguslab/rpc_remoteservice/IRemoteService.aidl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/java/org/arguslab/rpc_remoteservice/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/java/org/arguslab/rpc_remoteservice/RemoteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_remoteservice/src/test/java/org/arguslab/rpc_remoteservice/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/androidTest/java/org/arguslab/rpc_returnsensitive/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/java/org/arguslab/rpc_returnsensitive/LocalService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/java/org/arguslab/rpc_returnsensitive/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/test/java/org/arguslab/rpc_returnsensitive/ExampleUnitTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2MIvWp6bGJqrzX5J3CdG7PRZt50" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.ChangelistConflict&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="client.intent" />
+      <recent name="client.intent.xml" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="testEnre" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="client.Main" />
+      <module name="newICC" />
+      <option name="PROGRAM_PARAMETERS" value="-p D:\newICC\demo\Enre\nl.sogeti.android.gpstracker_1.3.5_85 -n nl.sogeti.android.gpstracker_1.3.5_85 -outputDir D:\newICC\result -name nl.sogeti.android.gpstracker_1.3.5_85.apk -path D:\newICC\demo\apks\other" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\admin\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="173e5fb4-bd58-498d-8252-b9fb5a8a6973" name="Changes" comment="" />
+      <created>1677467944735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677467944735</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.alibaba.fastjson2.JSONException" package="com.alibaba.fastjson2" />
+          <option name="timeStamp" value="11" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="49" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/client/intent/IntentClient.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="sc" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
