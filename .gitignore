@@ -7,7 +7,6 @@ target/
 config/
 demo/
 docs/
-lib/
 result/
 target/
 src/main/java/Evaluate
