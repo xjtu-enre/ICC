@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <methodSummary source="&lt;org.arguslab.icc_implicit_mix1.HookActivity: void onCreate(android.os.Bundle)&gt;">
+    <pathSummary>
+      <method/>
+      <methodtrace value="void onCreate(android.os.Bundle)"/>
+      <node type="setContentView" method="HookActivity onCreate" unit="virtualinvoke r0.&lt;org.arguslab.icc_implicit_mix1.HookActivity: void setContentView(int)&gt;(2130903041)">
+        <nodeInfo nodeId="1137473873" predsStr="1570606799" succsStr="" context=""/>
+        <baseNodePointTo value="1137473873" context=""/>
+        <nodeSetPointToMe value="1137473873," context=""/>
+      </node>
+    </pathSummary>
+  </methodSummary>
+  <methodSummary source="&lt;org.arguslab.icc_implicit_mix1.FooActivity: void onCreate(android.os.Bundle)&gt;">
+    <pathSummary>
+      <method/>
+      <methodtrace value="void onCreate(android.os.Bundle)"/>
+      <node type="setContentView" method="FooActivity onCreate" unit="virtualinvoke r0.&lt;org.arguslab.icc_implicit_mix1.FooActivity: void setContentView(int)&gt;(2130903040)">
+        <nodeInfo nodeId="2055152199" predsStr="448955038" succsStr="" context=""/>
+        <baseNodePointTo value="2055152199" context=""/>
+        <nodeSetPointToMe value="2055152199," context=""/>
+      </node>
+    </pathSummary>
+  </methodSummary>
+  <methodSummary source="&lt;org.arguslab.icc_implicit_mix1.MainActivity: void onCreate(android.os.Bundle)&gt;">
+    <pathSummary>
+      <method/>
+      <methodtrace value="void onCreate(android.os.Bundle)"/>
+      <node type="setContentView" method="MainActivity onCreate" unit="virtualinvoke r0.&lt;org.arguslab.icc_implicit_mix1.MainActivity: void setContentView(int)&gt;(2130903042)">
+        <nodeInfo nodeId="2085646490" predsStr="646852820" succsStr="183502806" context=""/>
+        <baseNodePointTo value="2085646490" context=""/>
+        <nodeSetPointToMe value="2085646490," context=""/>
+      </node>
+    </pathSummary>
+  </methodSummary>
+</root>

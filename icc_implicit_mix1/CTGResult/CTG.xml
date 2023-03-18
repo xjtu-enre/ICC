@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <source name="org.arguslab.icc_implicit_mix1.HookActivity" type="Activity"/>
+  <source name="org.arguslab.icc_implicit_mix1.MainActivity" type="Activity">
+    <destination ICCType="implicit" name="org.arguslab.icc_implicit_mix1.FooActivity" desType="Activity" edgeType="Act2Act" method="&lt;org.arguslab.icc_implicit_mix1.MainActivity: void leakImei()&gt;" instructionId="12" unit="virtualinvoke r0.&lt;org.arguslab.icc_implicit_mix1.MainActivity: void startActivity(android.content.Intent)&gt;(r1)" action="test_action" category="test_category1, test_category2" data="amandroid://fgwei:8888/abc/def" type="test/type" extras="String-data" flags=""/>
+  </source>
+  <source name="org.arguslab.icc_implicit_mix1.FooActivity" type="Activity">
+    <destination ICCType="implicit" name="org.arguslab.icc_implicit_mix1.HookActivity" desType="Activity" edgeType="Act2Act" method="&lt;org.arguslab.icc_implicit_mix1.FooActivity: void onCreate(android.os.Bundle)&gt;" instructionId="14" unit="virtualinvoke r0.&lt;org.arguslab.icc_implicit_mix1.FooActivity: void startActivity(android.content.Intent)&gt;(r2)" action="test_action2" category="test_category3, test_category4" data="amandroid://fgwei:8888/xxx/xxx.com" type="test/type" extras="String-data" flags=""/>
+  </source>
+</root>

@@ -9,10 +9,12 @@
       <resource>
         <directory>config</directory>
         <filtering>false</filtering>
+        <targetPath>config</targetPath>
       </resource>
       <resource>
         <directory>lib/platforms</directory>
         <filtering>false</filtering>
+        <targetPath>lib/platforms</targetPath>
       </resource>
     </resources>
     <plugins>
@@ -95,6 +97,16 @@
       <artifactId>json</artifactId>
       <version>20220924</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+
+
+
   </dependencies>
 
 

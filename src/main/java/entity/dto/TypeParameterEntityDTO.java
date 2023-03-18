@@ -1,7 +1,5 @@
 package entity.dto;
 
-import java.util.List;
-
 public class TypeParameterEntityDTO extends InternalEntityDTO {
 
   private String file;
@@ -11,7 +9,7 @@ public class TypeParameterEntityDTO extends InternalEntityDTO {
 
   public TypeParameterEntityDTO(int id, String name, String qualifiedName, int parentId,
       String file, AdditionalBinDTO additionalBin, LocationDTO location, String rawType) {
-    super(id, name, qualifiedName, parentId, "TypeParameter");
+    super(id, name, qualifiedName, parentId, "Type Parameter");
     this.file = file;
     this.additionalBin = additionalBin;
     this.location = location;

@@ -2,14 +2,23 @@ package client.intent;
 
 import client.intent.xml.Source;
 import client.intent.xml.XMLRoot;
+import com.iscas.iccbot.MyConfig;
+import com.iscas.iccbot.analyze.utils.TimeUtilsofProject;
+import com.iscas.iccbot.client.BaseClient;
+import com.iscas.iccbot.client.statistic.model.StatisticResult;
 import entity.dto.*;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.cli.CommandLine;
 import util.ArgParser;
 import util.SingleCollection;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.iscas.iccbot.Main.main;
+import static com.iscas.iccbot.Main.*;
+//import static com.iscas.iccbot.Main.main;
+
+@Slf4j
 public class IntentClient {
     private String iccXml;
 
@@ -28,17 +37,31 @@ public class IntentClient {
         this.iccXml = iccXml;
     }
 
-    public  void constructObject() {
+    public  StatisticResult  intentParser() {
+        StatisticResult result = startAnalyze();
         ReadXML readXML = new ReadXML(this.iccXml);
         XMLRoot xmlRoot = readXML.xmlToObject();
         setComponent(this.sc, xmlRoot);
         List<RootXY> rootXYList  = setICCMethod(this.sc, xmlRoot);
         setICCVariable(this.sc, xmlRoot,rootXYList);
         setIccDependency(this.sc,xmlRoot,rootXYList);
+        deleteIrregularIccDependency(this.sc);
+        return result;
         //System.out.println("agf");
     }
 
-    private void setIccDependency(SingleCollection sc, XMLRoot xmlRoot , List<RootXY> rootXYList) {
+    private void deleteIrregularIccDependency(SingleCollection sc) {
+
+        for (int i = 0 , len =  sc.getEnreDTO().getCells().size() ; i < len ; i++){
+            if (sc.getEnreDTO().getCells().get(i).getDest() == -1){
+                sc.getEnreDTO().getCells().remove(i);
+                len--;
+                i--;
+            }
+        }
+    }
+
+    public void setIccDependency(SingleCollection sc, XMLRoot xmlRoot , List<RootXY> rootXYList) {
         List<Source> source = xmlRoot.getSource();
         List<EntityDTO> variables = sc.getEnreDTO().getVariables();
         for (int root_i = 0; root_i < source.size(); root_i++) {
@@ -89,7 +112,7 @@ public class IntentClient {
         }
     }
 
-    private void setICCVariable(SingleCollection sc, XMLRoot xmlRoot,List<RootXY> rootXYList) {
+    public void setICCVariable(SingleCollection sc, XMLRoot xmlRoot,List<RootXY> rootXYList) {
         List<Source> source = xmlRoot.getSource();
         //List<VariableEntityDTO> variableList = new ArrayList<>();
         List<EntityDTO> variables = sc.getEnreDTO().getVariables();
@@ -192,7 +215,7 @@ public class IntentClient {
 
 
 
-    public  void intentParser(ArgParser.Args args) {
+    public  void argParser(ArgParser.Args args) {
         //String iccArgs = "java -jar ICCBot.jar  -path apk/ -name " + args.getApkPath() + " -outputDir " + args.getOutputDir() + " -androidJar lib/platforms -time 30 -maxPathNumber 100 -client CTGClient";
         // Analyze args
         String[] iccArgs = new String[]{
@@ -203,9 +226,30 @@ public class IntentClient {
                 "-outputDir",
                 args.getOutputDir(),
         };
-        main(iccArgs);
+        CommandLine mCmd = getCommandLine(iccArgs);
+        if (mCmd == null) {
+            return;
+        }
+        analyzeArgs(mCmd);
+
+        //main(iccArgs);
     }
 
+    public static StatisticResult  startAnalyze() {
+        log.info("Analyzing " + MyConfig.getInstance().getAppName());
+        BaseClient client = getClient();
+
+        TimeUtilsofProject.setTotalTimer(client);
+        long startTime = System.currentTimeMillis();
+
+        client.start();
+        StatisticResult result = client.getResult();
+        long endTime = System.currentTimeMillis();
+        //log.info("---------------------------------------");
+        //log.info("Analyzing " + MyConfig.getInstance().getAppName() + " Finish...\n");
+        log.info(MyConfig.getInstance().getClient() + " time = " + (endTime - startTime) / 1000 + " seconds");
+        return result;
+    }
 
 
 

@@ -1,6 +1,7 @@
 package client;
 
 import client.intent.IntentClient;
+import com.iscas.iccbot.client.statistic.model.StatisticResult;
 import entity.dto.CellDTO;
 import entity.dto.EnreDTO;
 import entity.dto.ValuesDTO;
@@ -10,10 +11,7 @@ import util.ArgParser;
 import util.EnreParser;
 import util.SingleCollection;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -24,20 +22,21 @@ public class Main {
     private static final SingleCollection sc = SingleCollection.getInstance();
 
     public static void main(String[] args) throws Exception {
-
         ArgParser.Args arguments = ArgParser.parseArgs(args);
         callEnre(arguments);
         EnreDTO enre = readJson(arguments.getEnreJson());
         sc.setEnreDTO(enre);
+        IntentClient intentClient = new IntentClient(getXmlFile(arguments.getOutputDir() + File.separator + arguments.getName().substring(0, arguments.getName().length() - 4)),sc);
+        intentClient.argParser(arguments);
+        StatisticResult result = intentClient.intentParser();
 
-        IntentClient intentClient = new IntentClient(getXmlFile(arguments.getOutputDir() + "\\" + arguments.getProjectName()),sc);
-        intentClient.intentParser(arguments);
-        intentClient.constructObject();
+        //MessengerClient messengerClient = new MessengerClient(sc,result);
+        //messengerClient.messengerParser();
         writeBack(arguments, enre);
         exit(0);
     }
 
-    private static EnreDTO readJson(String filepath) {
+    public static EnreDTO readJson(String filepath) {
         EnreDTO res;
         JSONObject enreObj;
         try (Reader in = new FileReader(filepath)) {
@@ -51,7 +50,7 @@ public class Main {
     }
 
     public static String getXmlFile(String xmlPath){
-        xmlPath += "\\CTGResult\\CTG.xml";
+        xmlPath += File.separator + "CTGResult" + File.separator + "CTG.xml";
         return xmlPath;
     }
 
