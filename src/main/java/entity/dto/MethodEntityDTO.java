@@ -3,7 +3,7 @@ package entity.dto;
 
 public class MethodEntityDTO extends InternalEntityDTO {
 
-  private String file;
+  private String File;
   private AdditionalBinDTO additionalBin;
   private EnhancementDTO enhancement;
   private LocationDTO location;
@@ -13,9 +13,9 @@ public class MethodEntityDTO extends InternalEntityDTO {
 
   private ICCMethodAttributeDTO iccMethodAttribute;
 
-  public MethodEntityDTO(int parentId, String file, AdditionalBinDTO additionalBin, EnhancementDTO enhancement, LocationDTO location, String modifiers, ParameterDTO parameter, String rawType) {
+  public MethodEntityDTO(int parentId, String File, AdditionalBinDTO additionalBin, EnhancementDTO enhancement, LocationDTO location, String modifiers, ParameterDTO parameter, String rawType) {
     super(parentId, "Method");
-    this.file = file;
+    this.File = File;
     this.additionalBin = additionalBin;
     this.enhancement = enhancement;
     this.location = location;
@@ -25,10 +25,10 @@ public class MethodEntityDTO extends InternalEntityDTO {
   }
 
   public MethodEntityDTO(int id, String name, String qualifiedName, int parentId,
-                         String file, AdditionalBinDTO additionalBin, EnhancementDTO enhancement,
+                         String File, AdditionalBinDTO additionalBin, EnhancementDTO enhancement,
                          LocationDTO location, String modifiers, ParameterDTO parameter, String rawType) {
     super(id, name, qualifiedName, parentId, "Method");
-    this.file = file;
+    this.File = File;
     this.additionalBin = additionalBin;
     this.enhancement = enhancement;
     this.location = location;
@@ -38,11 +38,11 @@ public class MethodEntityDTO extends InternalEntityDTO {
   }
 
   public String getFile() {
-    return file;
+    return File;
   }
 
-  public void setFile(String file) {
-    this.file = file;
+  public void setFile(String File) {
+    this.File = File;
   }
 
   public AdditionalBinDTO getAdditionalBin() {

@@ -2,27 +2,27 @@ package entity.dto;
 
 public class EnumConstantEntityDTO extends InternalEntityDTO {
 
-  private String file;
+  private String File;
   private AdditionalBinDTO additionalBin;
 
-  public EnumConstantEntityDTO(int parentId, String file, AdditionalBinDTO additionalBin) {
+  public EnumConstantEntityDTO(int parentId, String File, AdditionalBinDTO additionalBin) {
     super(parentId, "Enum Constant");
-    this.file = file;
+    this.File = File;
     this.additionalBin = additionalBin;
   }
 
-  public EnumConstantEntityDTO(int id, String name, String qualifiedName, int parentId, String file, AdditionalBinDTO additionalBin) {
+  public EnumConstantEntityDTO(int id, String name, String qualifiedName, int parentId, String File, AdditionalBinDTO additionalBin) {
     super(id, name, qualifiedName, parentId, "Enum Constant");
-    this.file = file;
+    this.File = File;
     this.additionalBin = additionalBin;
   }
 
   public String getFile() {
-    return file;
+    return File;
   }
 
-  public void setFile(String file) {
-    this.file = file;
+  public void setFile(String File) {
+    this.File = File;
   }
 
   public AdditionalBinDTO getAdditionalBin() {

@@ -18,7 +18,7 @@ import java.util.Map;
 
 import static java.lang.System.exit;
 
-public class Main {
+public class ICCMain {
     private static final SingleCollection sc = SingleCollection.getInstance();
 
     public static void main(String[] args) throws Exception {
@@ -32,6 +32,7 @@ public class Main {
 
         //MessengerClient messengerClient = new MessengerClient(sc,result);
         //messengerClient.messengerParser();
+        enhanceEnre();
         writeBack(arguments, enre);
         exit(0);
     }
@@ -54,6 +55,20 @@ public class Main {
         return xmlPath;
     }
 
+    private static void enhanceEnre() {
+        EnreDTO enre = sc.getEnreDTO();
+        Map<String, Integer> relationNum = enre.getRelationNum();
+        for (CellDTO cell : enre.getCells()) {
+            ValuesDTO values = cell.getValues();
+            Map<String, Integer> relationMap = values.getRelationMap();
+            for (Map.Entry<String, Integer> entry : relationMap.entrySet()) {
+                if (entry.getKey().equals("ICC")) {
+                    Integer val = relationNum.getOrDefault("ICC", 0);
+                    relationNum.put("ICC", val + 1);
+                }
+            }
+        }
+    }
 
     private static void callEnre(ArgParser.Args args) {
         if (!args.isCallEnre()) {

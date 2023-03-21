@@ -2,7 +2,7 @@ package entity.dto;
 
 public class EnumEntityDTO extends InternalEntityDTO {
 
-  private String file;
+  private String File;
   private AdditionalBinDTO additionalBin;
   private LocationDTO location;
   private String modifiers;
@@ -16,21 +16,21 @@ public class EnumEntityDTO extends InternalEntityDTO {
     this.rawType = rawType;
   }
 
-  public EnumEntityDTO(int id, String name, String qualifiedName, int parentId, AdditionalBinDTO additionalBin, LocationDTO location, String modifiers, String rawType, String file) {
+  public EnumEntityDTO(int id, String name, String qualifiedName, int parentId, AdditionalBinDTO additionalBin, LocationDTO location, String modifiers, String rawType, String File) {
     super(id, name, qualifiedName, parentId, "Enum");
     this.additionalBin = additionalBin;
     this.location = location;
     this.modifiers = modifiers;
     this.rawType = rawType;
-    this.file = file;
+    this.File = File;
   }
 
   public String getFile() {
-    return file;
+    return File;
   }
 
-  public void setFile(String file) {
-    this.file = file;
+  public void setFile(String File) {
+    this.File = File;
   }
 
   public AdditionalBinDTO getAdditionalBin() {

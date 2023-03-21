@@ -2,32 +2,32 @@ package entity.dto;
 
 public class AnnotationEntityDTO extends InternalEntityDTO {
 
-  private String file;
+  private String File;
   private AdditionalBinDTO additionalBin;
   private LocationDTO location;
   private String modifiers;
   private String rawType;
 
-  public AnnotationEntityDTO(int parentId, String file, AdditionalBinDTO additionalBin, String modifiers, String rawType) {
+  public AnnotationEntityDTO(int parentId, String File, AdditionalBinDTO additionalBin, String modifiers, String rawType) {
     super(parentId, "Annotation");
-    this.file = file;
+    this.File = File;
     this.additionalBin = additionalBin;
     this.modifiers = modifiers;
     this.rawType = rawType;
   }
 
-  public AnnotationEntityDTO(int parentId, String file, AdditionalBinDTO additionalBin, LocationDTO location, String modifiers, String rawType) {
+  public AnnotationEntityDTO(int parentId, String File, AdditionalBinDTO additionalBin, LocationDTO location, String modifiers, String rawType) {
     super(parentId, "Annotation");
-    this.file = file;
+    this.File = File;
     this.additionalBin = additionalBin;
     this.location = location;
     this.modifiers = modifiers;
     this.rawType = rawType;
   }
 
-  public AnnotationEntityDTO(int id, String name, String qualifiedName, int parentId, String file, AdditionalBinDTO additionalBin, LocationDTO location, String modifiers, String rawType) {
+  public AnnotationEntityDTO(int id, String name, String qualifiedName, int parentId, String File, AdditionalBinDTO additionalBin, LocationDTO location, String modifiers, String rawType) {
     super(id, name, qualifiedName, parentId, "Annotation");
-    this.file = file;
+    this.File = File;
     this.additionalBin = additionalBin;
     this.location = location;
     this.modifiers = modifiers;
@@ -35,11 +35,11 @@ public class AnnotationEntityDTO extends InternalEntityDTO {
   }
 
   public String getFile() {
-    return file;
+    return File;
   }
 
-  public void setFile(String file) {
-    this.file = file;
+  public void setFile(String File) {
+    this.File = File;
   }
 
   public AdditionalBinDTO getAdditionalBin() {
