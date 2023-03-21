@@ -1,8 +1,10 @@
 package entity.dto;
 
+import org.json.JSONPropertyName;
+
 public class VariableEntityDTO extends InternalEntityDTO {
 
-  private String file;
+  private String File;
   private AdditionalBinDTO additionalBin;
   private boolean global;
   private LocationDTO location;
@@ -12,10 +14,10 @@ public class VariableEntityDTO extends InternalEntityDTO {
   private ICCVariableAttributeDTO iccVariableAttribute;
 
   public VariableEntityDTO(int id, String name, String qualifiedName, int parentId, 
-      String file, AdditionalBinDTO additionalBin, boolean global, LocationDTO location, 
+      String File, AdditionalBinDTO additionalBin, boolean global, LocationDTO location, 
       String modifiers, String rawType) {
     super(id, name, qualifiedName, parentId, "Variable");
-    this.file = file;
+    this.File = File;
     this.additionalBin = additionalBin;
     this.global = global;
     this.location = location;
@@ -23,12 +25,13 @@ public class VariableEntityDTO extends InternalEntityDTO {
     this.rawType = rawType;
   }
 
+  @JSONPropertyName("File")
   public String getFile() {
-    return this.file;
+    return this.File;
   }
 
-  public void setFile(String file) {
-    this.file = file;
+  public void setFile(String File) {
+    this.File = File;
   }
 
   public String getRawType() {

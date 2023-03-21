@@ -50,7 +50,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>client.Main</mainClass>
+              <mainClass>client.ICCMain</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -62,7 +62,7 @@
           <appendAssemblyId>true</appendAssemblyId>
           <archive>
             <manifest>
-              <mainClass>client.Main</mainClass>
+              <mainClass>client.ICCMain</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

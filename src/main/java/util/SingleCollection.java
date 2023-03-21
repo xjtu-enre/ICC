@@ -1,14 +1,11 @@
 package util;
 
-import entity.dto.MethodEntityDTO;
-import entity.json.*;
-import org.eclipse.jdt.core.dom.IMethodBinding;
 import entity.dto.EnreDTO;
 import entity.dto.MethodEntityDTO;
-
+import entity.json.RootEntity;
+import org.eclipse.jdt.core.dom.IMethodBinding;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class SingleCollection {

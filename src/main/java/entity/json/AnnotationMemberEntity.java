@@ -1,5 +1,7 @@
 package entity.json;
 
+import org.json.JSONPropertyName;
+
 public class AnnotationMemberEntity extends BaseEntity {
 
   private String rawType;
@@ -34,6 +36,7 @@ public class AnnotationMemberEntity extends BaseEntity {
     this.location = location;
   }
 
+  @JSONPropertyName("File")
   public String getFile() {
     return File;
   }

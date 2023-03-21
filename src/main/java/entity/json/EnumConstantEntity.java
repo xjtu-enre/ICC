@@ -1,5 +1,7 @@
 package entity.json;
 
+import org.json.JSONPropertyName;
+
 public class EnumConstantEntity extends BaseEntity {
 
   private Location location;
@@ -24,6 +26,7 @@ public class EnumConstantEntity extends BaseEntity {
     this.location = location;
   }
 
+  @JSONPropertyName("File")
   public String getFile() {
     return File;
   }

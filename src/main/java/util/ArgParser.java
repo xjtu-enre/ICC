@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ArgParser {
-    public static final String DEFAULT_OUTPUT_FILE = "out.json";
+    public static final String DEFAULT_OUTPUT_FILE = "%s-enre-out/%s.icc.json";
     public static final String GRAPH_TYPE_UNIT = "Unit";
     public static final String GRAPH_TYPE_BLOCK = "Block";
 
@@ -91,7 +91,7 @@ public class ArgParser {
             res.setEnreJson(root.toString());
         }
         if (res.getOutputJson() == null) {
-            res.setOutputJson(res.getProjectName() + "-" + DEFAULT_OUTPUT_FILE);
+            res.setOutputJson(String.format(DEFAULT_OUTPUT_FILE, res.getProjectName(), res.getProjectName()));
         }
         //res.outputJson = res.outputDir + '\\' + res.outputJson;
        // res.enreJson = res.outputDir + '\\' + res.enreJson;
