@@ -1,5 +1,7 @@
 package entity.dto;
 
+import org.json.JSONPropertyName;
+
 public class AnnotationEntityDTO extends InternalEntityDTO {
 
   private String File;
@@ -34,6 +36,7 @@ public class AnnotationEntityDTO extends InternalEntityDTO {
     this.rawType = rawType;
   }
 
+  @JSONPropertyName("File")
   public String getFile() {
     return File;
   }

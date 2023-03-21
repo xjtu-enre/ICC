@@ -1,5 +1,7 @@
 package entity.dto;
 
+import org.json.JSONPropertyName;
+
 public class EnumEntityDTO extends InternalEntityDTO {
 
   private String File;
@@ -25,6 +27,7 @@ public class EnumEntityDTO extends InternalEntityDTO {
     this.File = File;
   }
 
+  @JSONPropertyName("File")
   public String getFile() {
     return File;
   }

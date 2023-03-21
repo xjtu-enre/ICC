@@ -1,5 +1,7 @@
 package entity.dto;
 
+import org.json.JSONPropertyName;
+
 public class FileEntityDTO extends InternalEntityDTO {
 
   private String File;
@@ -17,6 +19,7 @@ public class FileEntityDTO extends InternalEntityDTO {
     this.additionalBin = additionalBin;
   }
 
+  @JSONPropertyName("File")
   public String getFile() {
     return File;
   }

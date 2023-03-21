@@ -1,5 +1,7 @@
 package entity.dto;
 
+import org.json.JSONPropertyName;
+
 import java.util.List;
 
 public class ClassEntityDTO extends InternalEntityDTO {
@@ -59,6 +61,7 @@ public class ClassEntityDTO extends InternalEntityDTO {
     this.ICCcomponent = component;
   }
 
+  @JSONPropertyName("File")
   public String getFile() {
     return File;
   }

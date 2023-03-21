@@ -1,5 +1,7 @@
 package entity.json;
 
+import org.json.JSONPropertyName;
+
 public class InterfaceEntity extends BaseEntity {
 
   private String modifiers;
@@ -28,6 +30,7 @@ public class InterfaceEntity extends BaseEntity {
     this.modifiers = modifiers;
   }
 
+  @JSONPropertyName("File")
   public String getFile() {
     return File;
   }
