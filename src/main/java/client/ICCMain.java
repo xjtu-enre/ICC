@@ -1,5 +1,6 @@
 package client;
 
+import TempOutput.CreateFileUtil;
 import client.intent.IntentClient;
 import com.iscas.iccbot.client.statistic.model.StatisticResult;
 import entity.dto.CellDTO;
@@ -8,7 +9,7 @@ import entity.dto.ValuesDTO;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import util.ArgParser;
-import util.EnreParser;
+import util.EnreFormatParser;
 import util.SingleCollection;
 
 import java.io.*;
@@ -33,7 +34,8 @@ public class ICCMain {
         //MessengerClient messengerClient = new MessengerClient(sc,result);
         //messengerClient.messengerParser();
         enhanceEnre();
-        writeBack(arguments, enre);
+        // writeBack(arguments, enre);
+        write(arguments, enre);
         exit(0);
     }
 
@@ -43,7 +45,7 @@ public class ICCMain {
         try (Reader in = new FileReader(filepath)) {
             JSONTokener tok = new JSONTokener(in);
             enreObj = new JSONObject(tok);
-            res = EnreParser.parse(enreObj);
+            res = EnreFormatParser.parse(enreObj);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -60,7 +62,7 @@ public class ICCMain {
         Map<String, Integer> relationNum = enre.getRelationNum();
         for (CellDTO cell : enre.getCells()) {
             ValuesDTO values = cell.getValues();
-            Map<String, Integer> relationMap = values.getRelationMap();
+            Map<String, Integer> relationMap = values.getRelations();
             for (Map.Entry<String, Integer> entry : relationMap.entrySet()) {
                 if (entry.getKey().equals("ICC")) {
                     Integer val = relationNum.getOrDefault("ICC", 0);
@@ -81,6 +83,13 @@ public class ICCMain {
                 args.getProjectName(),
         };
         work.workflow(enreArgs);
+    }
+
+    private static void write(ArgParser.Args args, EnreDTO enre) {
+        File out = new File(args.getOutputJson());
+        String filepath = out.getParent();
+        String filename = out.getName().substring(0, out.getName().length() - 5);
+        CreateFileUtil.createJsonFile(filepath, filename, enre);
     }
 
     private static void writeBack(ArgParser.Args args, EnreDTO enre) {
@@ -106,7 +115,7 @@ public class ICCMain {
             curValues.put("loc", loction);
             curValues.put("iccMechanism",valuesDTO.getIccMechanism());
             curValues.put("iccCategory",valuesDTO.getIccCategory());
-            for (Map.Entry<String, Integer> entry : valuesDTO.getRelationMap().entrySet()) {
+            for (Map.Entry<String, Integer> entry : valuesDTO.getRelations().entrySet()) {
                 key = entry.getKey();
                 value = (Integer) entry.getValue();
                 curValues.put(key, value);
