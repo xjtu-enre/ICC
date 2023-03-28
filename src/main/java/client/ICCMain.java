@@ -1,8 +1,11 @@
 package client;
 
-import TempOutput.CreateFileUtil;
 import client.intent.IntentClient;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonWriter;
 import com.iscas.iccbot.client.statistic.model.StatisticResult;
+import entity.adapter.*;
 import entity.dto.CellDTO;
 import entity.dto.EnreDTO;
 import entity.dto.ValuesDTO;
@@ -86,10 +89,19 @@ public class ICCMain {
     }
 
     private static void write(ArgParser.Args args, EnreDTO enre) {
-        File out = new File(args.getOutputJson());
-        String filepath = out.getParent();
-        String filename = out.getName().substring(0, out.getName().length() - 5);
-        CreateFileUtil.createJsonFile(filepath, filename, enre);
+        try (JsonWriter out = new JsonWriter(new BufferedWriter(new FileWriter(args.getOutputDir())))) {
+            GsonBuilder builder = new GsonBuilder().registerTypeAdapter(EnreDTOAdapter.class, new EnreDTOAdapter(
+                new CellDTOAdapter(),
+                new MapAdapter(),
+                new CategoryDTOAdapter(),
+                new EntityDTOAdapter()
+            ));
+            Gson gson = builder.setPrettyPrinting().disableHtmlEscaping().create();
+            out.setIndent("  ");
+            gson.toJson(enre, EnreDTO.class, out);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private static void writeBack(ArgParser.Args args, EnreDTO enre) {
