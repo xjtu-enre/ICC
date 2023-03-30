@@ -16,8 +16,6 @@ import util.EnreFormatParser;
 import util.SingleCollection;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import static java.lang.System.exit;
@@ -27,7 +25,6 @@ public class ICCMain {
 
     public static void main(String[] args) throws Exception {
         ArgParser.Args arguments = ArgParser.parseArgs(args);
-        callEnre(arguments);
         EnreDTO enre = readJson(arguments.getEnreJson());
         sc.setEnreDTO(enre);
         IntentClient intentClient = new IntentClient(getXmlFile(arguments.getOutputDir() + File.separator + arguments.getName().substring(0, arguments.getName().length() - 4)),sc);
@@ -75,76 +72,18 @@ public class ICCMain {
         }
     }
 
-    private static void callEnre(ArgParser.Args args) {
-        if (!args.isCallEnre()) {
-            return;
-        }
-        TemplateWork work = new TemplateWork();
-        String[] enreArgs = new String[]{
-                "java",
-                args.getProjectPath(),
-                args.getProjectName(),
-        };
-        work.workflow(enreArgs);
-    }
-
     private static void write(ArgParser.Args args, EnreDTO enre) {
-        try (JsonWriter out = new JsonWriter(new BufferedWriter(new FileWriter(args.getOutputDir())))) {
-            GsonBuilder builder = new GsonBuilder().registerTypeAdapter(EnreDTOAdapter.class, new EnreDTOAdapter(
+        try (JsonWriter out = new JsonWriter(new BufferedWriter(new FileWriter(args.getOutputJson())))) {
+            GsonBuilder builder = new GsonBuilder();
+            builder.registerTypeAdapter(EnreDTO.class, new EnreDTOAdapter(
                 new CellDTOAdapter(),
                 new MapAdapter(),
                 new CategoryDTOAdapter(),
                 new EntityDTOAdapter()
             ));
-            Gson gson = builder.setPrettyPrinting().disableHtmlEscaping().create();
+            Gson gson = builder.create();
             out.setIndent("  ");
             gson.toJson(enre, EnreDTO.class, out);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private static void writeBack(ArgParser.Args args, EnreDTO enre) {
-        String outputJsonFile = args.getOutputJson();
-        List<JSONObject> cellArray = new ArrayList<>();
-        JSONObject curCell = new JSONObject();
-        String key;
-        Integer value;
-        JSONObject curValues;
-        JSONObject loction;
-        for (CellDTO cell : enre.getCells()) {
-            curCell = new JSONObject();
-            curCell.put("src", cell.getSrc());
-            curCell.put("dest", cell.getDest());
-            curValues = new JSONObject();
-            loction = new JSONObject();
-            //if(cell.getValues().getLoc().getStartLine())
-            loction.put("startLine",cell.getValues().getLoc().getStartLine());
-            loction.put("endLine",cell.getValues().getLoc().getEndLine());
-            loction.put("startColumn",cell.getValues().getLoc().getStartColumn());
-            loction.put("endColumn",cell.getValues().getLoc().getEndColumn());
-            ValuesDTO valuesDTO = cell.getValues();
-            curValues.put("loc", loction);
-            curValues.put("iccMechanism",valuesDTO.getIccMechanism());
-            curValues.put("iccCategory",valuesDTO.getIccCategory());
-            for (Map.Entry<String, Integer> entry : valuesDTO.getRelations().entrySet()) {
-                key = entry.getKey();
-                value = (Integer) entry.getValue();
-                curValues.put(key, value);
-            }
-
-            curCell.put("values", curValues);
-            cellArray.add(curCell);
-        }
-        try (FileWriter out = new FileWriter(outputJsonFile)) {
-            JSONObject res = new JSONObject();
-            res.put("schemaVersion", enre.getSchemaVersion());
-            res.put("variables", enre.getVariables());
-            res.put("cells", cellArray);
-            res.put("entityNum", enre.getEntityNum());
-            res.put("relationNum", enre.getRelationNum());
-            res.put("categories", enre.getCategories());
-            out.write(res.toString(2));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
