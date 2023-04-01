@@ -1,8 +1,6 @@
 package util;
 
 import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class ArgParser {
     public static final String DEFAULT_OUTPUT_FILE = "%s-enre-out/%s.icc.json";
@@ -85,10 +83,7 @@ public class ArgParser {
             res.setType("Unit");
         }
         if (res.getEnreJson() == null) {
-            res.setCallEnre(true);
-            Path path = Paths.get(res.getProjectName() + "-enre-out");
-            Path root = Paths.get(String.valueOf(path), res.getProjectName() + "-out.json");
-            res.setEnreJson(root.toString());
+            throw new RuntimeException("option 'enreJson' must be specified.");
         }
         if (res.getOutputJson() == null) {
             res.setOutputJson(String.format(DEFAULT_OUTPUT_FILE, res.getProjectName(), res.getProjectName()));
@@ -101,7 +96,7 @@ public class ArgParser {
         if (!projectPathFile.isDirectory()) {
             throw new RuntimeException("invalid argument 'projectPath': " + res.projectPath);
         }
-        if (!res.isCallEnre() && !enreJsonFile.isFile() || !res.enreJson.endsWith(".json")) {
+        if (!enreJsonFile.isFile() || !res.enreJson.endsWith(".json")) {
             throw new RuntimeException("invalid argument 'enreJson': " + res.enreJson);
         }
         if (!outputJsonFile.isFile()) {
@@ -119,7 +114,6 @@ public class ArgParser {
         private String name;
         private String enreJson;
         private String outputJson;
-        private boolean callEnre;
         private String type;
 
         private String outputDir;
@@ -134,23 +128,6 @@ public class ArgParser {
             this.projectName = projectName;
             this.enreJson = enreJson;
             this.outputJson = outputJson;
-        }
-
-        public Args(String projectPath, String projectName, String enreJson, String outputJson, boolean callEnre, String type) {
-            this.projectPath = projectPath;
-            this.projectName = projectName;
-            this.enreJson = enreJson;
-            this.outputJson = outputJson;
-            this.callEnre = callEnre;
-            this.type = type;
-        }
-
-        public boolean isCallEnre() {
-            return callEnre;
-        }
-
-        public void setCallEnre(boolean callEnre) {
-            this.callEnre = callEnre;
         }
 
         public String getOutputJson() {

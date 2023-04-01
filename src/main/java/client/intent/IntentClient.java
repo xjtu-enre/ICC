@@ -99,7 +99,7 @@ public class IntentClient {
                         ValuesDTO values = new ValuesDTO();
                         values.setIccMechanism("Intent Mechanism");
                         values.setIccCategory(source.get(root_i).destination.get(root_j).getICCType());
-                        values.getRelationMap().put("ICC", 1);
+                        values.getRelations().put("ICC", 1);
                         if (location!=null)
                             values.setLoc(location);
                         else
@@ -195,7 +195,7 @@ public class IntentClient {
                             MethodEntityDTO methodDTO = (MethodEntityDTO) dto;
                             ICCMethodAttributeDTO iccMethodAttribute = new ICCMethodAttributeDTO();
                             iccMethodAttribute.setSend(true);
-                            iccMethodAttribute.setMachanismType("Intent");
+                            iccMethodAttribute.setMechanismType("Intent");
                             methodDTO.setIccMethodAttribute(iccMethodAttribute);
                             methodList.add(methodDTO);
                             RootXY rootXY = new RootXY();
@@ -218,6 +218,8 @@ public class IntentClient {
     public  void argParser(ArgParser.Args args) {
         //String iccArgs = "java -jar ICCBot.jar  -path apk/ -name " + args.getApkPath() + " -outputDir " + args.getOutputDir() + " -androidJar lib/platforms -time 30 -maxPathNumber 100 -client CTGClient";
         // Analyze args
+        // change FlowDroid max analysis time to 360 min (6 hours)
+        int timeLimit = 360;
         String[] iccArgs = new String[]{
                 "-path",
                 args.getPath(),
@@ -225,6 +227,8 @@ public class IntentClient {
                 args.getName(),
                 "-outputDir",
                 args.getOutputDir(),
+                "-time",
+                String.valueOf(timeLimit),
         };
         CommandLine mCmd = getCommandLine(iccArgs);
         if (mCmd == null) {
