@@ -14,9 +14,9 @@ import util.SingleCollection;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import static com.iscas.iccbot.Main.*;
-//import static com.iscas.iccbot.Main.main;
 
 @Slf4j
 public class IntentClient {
@@ -50,6 +50,7 @@ public class IntentClient {
         //System.out.println("agf");
     }
 
+
     private void deleteIrregularIccDependency(SingleCollection sc) {
 
         for (int i = 0 , len =  sc.getEnreDTO().getCells().size() ; i < len ; i++){
@@ -71,6 +72,27 @@ public class IntentClient {
                     String destName = source.get(root_i).destination.get(root_j).getName();
                     Integer src_id = null, dest_id = null;
                     LocationDTO location =null;
+
+                    for (Map.Entry<Integer,String> entry: sc.getIdToQualifiedNameMap().entrySet()){
+                        if (entry.getValue().equals(srcName)){
+                            src_id = entry.getKey();
+                        }
+                        if (entry.getValue().equals(destName)){
+                            dest_id = entry.getKey();
+                        }
+                    }
+
+
+                    for (int j = 0 ; j < rootXYList.size() ; j++) {
+                        if (rootXYList.get(j).getRootX() == root_i && rootXYList.get(j).getRootY() == root_j) {
+                            //location = ((MethodEntityDTO) variables.get(var_i)).getLocation();
+                            location = rootXYList.get(j).getLocation();
+                        }
+
+                    }
+
+
+                    /*
                     for (int var_i = 0; var_i < variables.size(); var_i++) {
                         if (variables.get(var_i).getQualifiedName().equals(srcName)) {
                             src_id = variables.get(var_i).getId();
@@ -89,6 +111,8 @@ public class IntentClient {
 
                         }
                     }
+
+                    */
                     if (src_id != null) {
                         CellDTO cellDTO = new CellDTO();
                         cellDTO.setSrc(src_id);
@@ -146,17 +170,17 @@ public class IntentClient {
         for (int root_i = 0; root_i < source.size(); root_i++) {
             for (int var_i = 0; var_i < variables.size(); var_i++) {
                 EntityDTO dto = variables.get(var_i);
-                if (source.get(root_i).getName().equals(dto.getQualifiedName()) && dto instanceof ClassEntityDTO) {
+                if (source.get(root_i).getName().equals(dto.getQualifiedName()) && dto instanceof ClassEntityDTO && !source.get(root_i).getType().equals("NotComponentSource")) {
                     EntityDTO dtoClass = sc.getEnreDTO().getVariables().get(var_i);
                     ClassEntityDTO classDTO = (ClassEntityDTO) dtoClass;
                     ComponentDTO componentDTO = new ComponentDTO();
                     componentDTO.setComponentCategory(source.get(root_i).getType());
                     classDTO.setComponent(componentDTO);
+                    sc.getIdToQualifiedNameMap().put(classDTO.getId(),classDTO.getQualifiedName());
                     //break;
                 }
             }
         }
-
         for (int var_i = 0; var_i < variables.size(); var_i++) {
             for (int root_i = 0; root_i < source.size(); root_i++) {
                 if (source.get(root_i).destination != null) {
@@ -165,11 +189,12 @@ public class IntentClient {
                         if (source.get(root_i).destination.get(root_j).getName().equals(dto.getQualifiedName()) && dto instanceof ClassEntityDTO){
                             EntityDTO dtoClass = sc.getEnreDTO().getVariables().get(var_i);
                             ClassEntityDTO classDTO = (ClassEntityDTO) dtoClass;
-                            if(classDTO.getCategory().equals("Class"))
+                            if(classDTO.getCategory().equals("Class")  && !source.get(root_i).getType().equals("NotComponentSource"))
                             {
                                 ComponentDTO componentDTO = new ComponentDTO();
                                 componentDTO.setComponentCategory(source.get(root_i).getType());
                                 classDTO.setComponent(componentDTO);
+                                sc.getIdToQualifiedNameMap().put(classDTO.getId(),classDTO.getQualifiedName());
                                 break;
                             }
                         }
@@ -202,6 +227,8 @@ public class IntentClient {
                             rootXY.setMethodID(methodDTO.getId());
                             rootXY.setRootX(root_i);
                             rootXY.setRootY(root_j);
+                            LocationDTO locationDTO = methodDTO.getLocation();
+                            rootXY.setLocation(locationDTO);
                             rootXYList.add(rootXY);
                         }
                     }
@@ -254,9 +281,5 @@ public class IntentClient {
         log.info(MyConfig.getInstance().getClient() + " time = " + (endTime - startTime) / 1000 + " seconds");
         return result;
     }
-
-
-
-
 
 }

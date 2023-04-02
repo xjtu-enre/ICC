@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="173e5fb4-bd58-498d-8252-b9fb5a8a6973" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/icc_dynregister1/build.gradle" beforeDir="false" />
@@ -559,6 +558,11 @@
       <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/values/strings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/main/res/values/styles.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/apks/ICC-Bench/rpc_returnsensitive/src/test/java/org/arguslab/rpc_returnsensitive/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/ICCMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/ICCMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/intent/IntentClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/intent/IntentClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/messenger/MessengerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/messenger/MessengerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/dto/RootXY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/dto/RootXY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/SingleCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/SingleCollection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -600,6 +604,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Evaluate" />
@@ -610,7 +619,7 @@
       <recent name="D:\newICC\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testEnre">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="BulidGT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Evaluate.BulidGT" />
       <module name="newICC" />
@@ -637,27 +646,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testEnre" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="client.Main" />
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.ICCMain" />
       <module name="newICC" />
-      <option name="PROGRAM_PARAMETERS" value="-p C:\Users\admin\Desktop\org.siislab.tutorial.friendtracker -n org.siislab.tutorial.friendtracker -outputDir D:\newICC\result -name FriendTracker.apk -path C:\Users\admin\Desktop -packageName org.siislab.tutorial.friendtracker" />
+      <option name="PROGRAM_PARAMETERS" value="-p D:\newICC\testAPK\com.iqinbao.android.songgroup1 -n com.iqinbao.android.songgroup1 -i D:\newICC\testAPK\com.iqinbao.android.songgroup1-enre-out\com.iqinbao.android.songgroup1-out.json -outputDir D:\newICC\testAPK\result -path D:\newICC\testAPK -name 03.apk" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="runAll" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="client.ICCMain" />
+      <module name="newICC" />
+      <option name="PROGRAM_PARAMETERS" value="-p demo\Enre\rpc_messengerservice -n rpc_messengerservice -outputDir D:\newICC\result -name rpc_messengerservice.apk -path D:\newICC\demo\apks\ICC-Bench\apks\RpcHandling" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.testEnre" />
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.runAll" />
       <item itemvalue="Application.BulidGT" />
       <item itemvalue="Application.Calculate" />
     </list>
@@ -679,7 +686,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677467944735</updated>
-      <workItem from="1679021253954" duration="5606000" />
+      <workItem from="1679021253954" duration="6296000" />
+      <workItem from="1680336387213" duration="18000" />
     </task>
     <servers />
   </component>
@@ -696,7 +704,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -710,19 +717,9 @@
           <option name="timeStamp" value="49" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Evaluate/BulidGT.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Evaluate/Calculate.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/client/messenger/MessengerClient.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="62" />
+          <url>file://$PROJECT_DIR$/src/main/java/client/ICCMain.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -734,7 +731,7 @@
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="messengerClient.result" />
+        <watch expression="sc" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

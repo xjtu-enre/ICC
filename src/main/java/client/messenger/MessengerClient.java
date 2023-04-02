@@ -28,12 +28,12 @@ public class MessengerClient {
 
     public void messengerParser(){
         List<ClassEntityDTO> messengerClassDTO = findMemberVar();
-        intentBasedParsing();
+        intentBasedParsing(messengerClassDTO);
         System.out.println("xs");
         //staticVarBasedParsing();
     }
 
-    private void intentBasedParsing() {
+    private void intentBasedParsing(List<ClassEntityDTO> messengerClassDTO) {
         //Map<String, Set<IntentSummaryModel>> intentSummarySendTypeMap =
         Set<IntentSummaryModel> toICC =result.getAllICCStatistic().getIntentSummarySendTypeMap().get("toICC");
         Map<String, String> messengerMap = new HashMap<String, String>();
@@ -59,13 +59,18 @@ public class MessengerClient {
             ValuesDTO valuesDTO = new ValuesDTO();
             valuesDTO.setIccMechanism("Messenger Mechanism");
             valuesDTO.setIccCategory("Intent Based");
+            //valuesDTO.getRelationMap().put("ICC", 1);
             for (int i = 0 ; i < sc.getEnreDTO().getVariables().size(); i++){
-                if (sc.getEnreDTO().getVariables().get(i) instanceof ClassEntityDTO && sc.getEnreDTO().getVariables().get(i).getQualifiedName().equals(key)){
-                    //System.out.println(key + "　：" + messengerMap.get(key));
-                    cellDTO.setSrc(sc.getEnreDTO().getVariables().get(i).getId());
-                }
-                if (sc.getEnreDTO().getVariables().get(i) instanceof ClassEntityDTO &&  sc.getEnreDTO().getVariables().get(i).getQualifiedName().equals(messengerMap.get(key))){
-                    cellDTO.setDest( sc.getEnreDTO().getVariables().get(i).getId());
+                for (int j = 0 ; j < messengerClassDTO.size() ; j++) {
+                    if (sc.getEnreDTO().getVariables().get(i) instanceof ClassEntityDTO && sc.getEnreDTO().getVariables().get(i).getQualifiedName().equals(key)
+                    && sc.getEnreDTO().getVariables().get(i).getId() == messengerClassDTO.get(j).getId()) {
+                        //System.out.println(key + "　：" + messengerMap.get(key));
+                        cellDTO.setSrc(sc.getEnreDTO().getVariables().get(i).getId());
+                    }
+                    if (sc.getEnreDTO().getVariables().get(i) instanceof ClassEntityDTO && sc.getEnreDTO().getVariables().get(i).getQualifiedName().equals(messengerMap.get(key))
+                    &&  sc.getEnreDTO().getVariables().get(i).getId() == messengerClassDTO.get(j).getId()) {
+                        cellDTO.setDest(sc.getEnreDTO().getVariables().get(i).getId());
+                    }
                 }
 
             }

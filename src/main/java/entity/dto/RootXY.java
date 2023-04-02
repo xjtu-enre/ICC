@@ -5,6 +5,10 @@ public class RootXY {
     int rootX;
     int rootY;
 
+    LocationDTO location;
+
+
+
     public int getMethodID() {
         return methodID;
     }
@@ -27,5 +31,13 @@ public class RootXY {
 
     public void setRootY(int rootY) {
         this.rootY = rootY;
+    }
+
+    public LocationDTO getLocation() {
+        return location;
+    }
+
+    public void setLocation(LocationDTO location) {
+        this.location = location;
     }
 }

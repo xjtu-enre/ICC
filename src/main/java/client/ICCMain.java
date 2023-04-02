@@ -6,9 +6,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonWriter;
 import com.iscas.iccbot.client.statistic.model.StatisticResult;
 import entity.adapter.*;
-import entity.dto.CellDTO;
-import entity.dto.EnreDTO;
-import entity.dto.ValuesDTO;
+import entity.dto.*;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import util.ArgParser;
@@ -16,6 +14,8 @@ import util.EnreFormatParser;
 import util.SingleCollection;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static java.lang.System.exit;
@@ -27,6 +27,7 @@ public class ICCMain {
         ArgParser.Args arguments = ArgParser.parseArgs(args);
         EnreDTO enre = readJson(arguments.getEnreJson());
         sc.setEnreDTO(enre);
+        //setScMap(sc);
         IntentClient intentClient = new IntentClient(getXmlFile(arguments.getOutputDir() + File.separator + arguments.getName().substring(0, arguments.getName().length() - 4)),sc);
         intentClient.argParser(arguments);
         StatisticResult result = intentClient.intentParser();
@@ -76,16 +77,26 @@ public class ICCMain {
         try (JsonWriter out = new JsonWriter(new BufferedWriter(new FileWriter(args.getOutputJson())))) {
             GsonBuilder builder = new GsonBuilder();
             builder.registerTypeAdapter(EnreDTO.class, new EnreDTOAdapter(
-                new CellDTOAdapter(),
-                new MapAdapter(),
-                new CategoryDTOAdapter(),
-                new EntityDTOAdapter()
+                    new CellDTOAdapter(),
+                    new MapAdapter(),
+                    new CategoryDTOAdapter(),
+                    new EntityDTOAdapter()
             ));
             Gson gson = builder.create();
             out.setIndent("  ");
             gson.toJson(enre, EnreDTO.class, out);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    private static void setScMap(SingleCollection sc) {
+        List<EntityDTO> variables = sc.getEnreDTO().getVariables();
+        for (int var_i = 0; var_i < variables.size(); var_i++) {
+            EntityDTO dto = variables.get(var_i);
+            if (dto instanceof ClassEntityDTO){
+                sc.getIdToQualifiedNameMap().put(dto.getId(),dto.getQualifiedName());
+            }
         }
     }
 }
